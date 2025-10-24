@@ -6,10 +6,10 @@ import './App.css';
 
 function App() {
   return (
-    <div class="m-0 p-0 box-border">
-      <div class="flex bg-black h-[100vh]  ">
+    <div className="m-0 p-0 box-border">
+      <div className="flex bg-black h-[100vh]  ">
         {sidenav()}
-        <div class="bg-[#f0f0f0] w-full flex flex-col ">
+        <div className="bg-[#f0f0f0] w-full flex flex-col ">
           {header()}
 
           {main()}

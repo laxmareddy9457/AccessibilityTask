@@ -13,11 +13,11 @@
 }
 
 
-.sidenav div {
+.sidenav button {
   border-left: solid 4px transparent;
 }
 
-.sidenav div:hover {
+.sidenav button:hover {
   background-color: rgb(232, 230, 230);
   border-left-color: red;
   cursor: pointer;

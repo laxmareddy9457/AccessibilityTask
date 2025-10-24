@@ -19,9 +19,11 @@ import wordfull from "../../resources/wordfull.png";
 
 const main = () => {
     return (
-        <div
+        <main
+            role="main"
+            aria-label="Explore Microsoft 365"
             className="content rounded-tl-xl overflow-y-auto pb-16 h-lvh bg-gray shadow-[0_0_0_1px_rgba(0,0,0,0.05)]">
-            <div
+            <div aria-label="notification" role="banner"
                 className="rounded-tl-xl flex items-center bg-gradient-to-r from-red-100 to-blue-100 py-4 px-4 text-sm">
                 <img src={microsoftoffice} className="ml-auto  h-6 mr-2 " alt="microsoftoffice" />
 
@@ -30,19 +32,22 @@ const main = () => {
                 <span>
                     The Office app is becoming the new Microsoft 365 app. Your home to
                     find, create, and share your content and ideas.
-                    <span className="text-red-600  cursor-pointer">Learn More</span>
+                    <span className="text-red-800  cursor-pointer">Learn More</span>
                 </span>
-                <FeatherIcon icon="x" strokeWidth="1" className="ml-auto cursor-pointer" />
+                <button className="ml-auto ">
+                    <FeatherIcon icon="x" strokeWidth="1" className="cursor-pointer" aria-label="clear notification" />
+                </button>
             </div>
-            <div className="mt-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-                <div className="flex items-center justify-between p-2">
+            <div className="mt-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20" role-="contentinfo" aria-label="content">
+                <div aria-labelledby="apps" className="flex items-center justify-between p-2">
                     <h2 id="apps" className="text-xl font-semibold">Apps</h2>
                     <button
-                        className="flex items-center bg-red-600 text-white px-3 py-1 rounded-md text-sm hover:bg-red-700">
-                        <FeatherIcon icon='plus-square' classNameName='mr-1' /> Add apps
+                        aria-label="Add apps"
+                        className="flex items-center bg-red-800 text-white px-3 py-1 rounded-md text-sm hover:bg-red-700">
+                        <FeatherIcon icon='plus-square' className='mr-1' /> Add apps
                     </button>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6" aria-labelledby="apps">
                     <div
                         className="bg-white shadow p-4 rounded-lg flex flex-col items-center hover:shadow-lg transition">
                         <img src={teams} className="h-12" alt="teams" />
@@ -82,13 +87,13 @@ const main = () => {
                 </div>
 
                 <div className="text-right">
-                    <button className="text-red-600 hover:underline text-sm">
+                    <button className="text-red-800 hover:underline text-sm">
                         All apps →
                     </button>
                 </div>
-                <div>
-                    <h3 id="previously added" className="text-lg font-semibold mt-4 mb-3">Previously added</h3>
-                    <div className="grid md:grid-cols-3 gap-3">
+                <div role="region" aria-label="previous added apps">
+                    <h3 id="previouslyadded" className="text-lg font-semibold mt-4 mb-3">Previously added</h3>
+                    <div className="grid md:grid-cols-3 gap-3" aria-label="previous added apps">
                         <div className="flex items-center  p-3 rounded-md hover:shadow-lg transition cursor-pointer">
                             <img src={appstudio} alt="appstudio" className="h-8 mr-3" />
                             <p>App Studio</p>
@@ -119,7 +124,7 @@ const main = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-wrap gap-2 mt-6">
+                <div aria-label="categories" className="flex flex-wrap gap-2 mt-6">
                     <button
                         className="border border-gray-400 rounded-full px-4 py-1 text-sm hover:bg-black hover:text-white transition">
                         Productivity
@@ -138,7 +143,7 @@ const main = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </main >
     )
 }
 
