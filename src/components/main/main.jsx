@@ -23,7 +23,7 @@ const main = () => {
             role="main"
             aria-label="Explore Microsoft 365"
             className="content rounded-tl-xl overflow-y-auto pb-16 h-lvh bg-gray shadow-[0_0_0_1px_rgba(0,0,0,0.05)]">
-            <div aria-label="notification" role="banner"
+            <div aria-label="notification"
                 className="rounded-tl-xl flex items-center bg-gradient-to-r from-red-100 to-blue-100 py-4 px-4 text-sm">
                 <img src={microsoftoffice} className="ml-auto  h-6 mr-2 " alt="microsoftoffice" />
 
