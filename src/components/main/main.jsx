@@ -34,8 +34,8 @@ const main = () => {
                     find, create, and share your content and ideas.
                     <span className="text-red-800  cursor-pointer">Learn More</span>
                 </span>
-                <button className="ml-auto ">
-                    <FeatherIcon icon="x" strokeWidth="1" className="cursor-pointer" aria-label="clear notification" />
+                <button className="ml-auto " aria-label="clear notification" >
+                    <FeatherIcon icon="x" strokeWidth="1" className="cursor-pointer" />
                 </button>
             </div>
             <div className="mt-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20" role-="contentinfo" aria-label="content">
